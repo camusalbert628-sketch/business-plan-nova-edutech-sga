@@ -157,7 +157,7 @@
             </div>
         </div>
 
-        <!-- Slide Indicators (21 slides total) -->
+        <!-- Slide Indicators (22 slides total) -->
         <div class="flex items-center gap-2 mb-2">
             <button onclick="goToSlide(0)" class="slide-dot h-2 w-8 rounded-full bg-brand-green-500 transition-all duration-300" aria-label="Slide 1"></button>
             <button onclick="goToSlide(1)" class="slide-dot h-2 w-2 rounded-full bg-white/20 hover:bg-white/40 transition-all duration-300" aria-label="Slide 2"></button>
@@ -180,6 +180,7 @@
             <button onclick="goToSlide(18)" class="slide-dot h-2 w-2 rounded-full bg-white/20 hover:bg-white/40 transition-all duration-300" aria-label="Slide 19"></button>
             <button onclick="goToSlide(19)" class="slide-dot h-2 w-2 rounded-full bg-white/20 hover:bg-white/40 transition-all duration-300" aria-label="Slide 20"></button>
             <button onclick="goToSlide(20)" class="slide-dot h-2 w-2 rounded-full bg-white/20 hover:bg-white/40 transition-all duration-300" aria-label="Slide 21"></button>
+            <button onclick="goToSlide(21)" class="slide-dot h-2 w-2 rounded-full bg-white/20 hover:bg-white/40 transition-all duration-300" aria-label="Slide 22"></button>
         </div>
     </header>
 
@@ -1325,7 +1326,151 @@
 
                 </div>
 
-                <!-- ── SLIDE 8: MARCHÉ EDTECH CAMEROUN – CONTEXTE & OPPORTUNITÉS ── -->
+                <!-- ── SLIDE 8: SEGMENTATION DU MARCHÉ EDTECH PAR SECTEUR ── -->
+                <div id="slide-8-segmentation" class="slide-frame slide-fade-in w-full hidden flex flex-col items-center">
+                    
+                    <!-- Header Section inside slide -->
+                    <div class="w-full flex flex-col md:flex-row justify-between items-center border-b border-white/10 pb-3 mb-4 gap-4">
+                        <div class="text-center md:text-left">
+                            <h2 class="text-2xl md:text-3xl font-black text-white font-display">Segmentation du marché EdTech par secteur</h2>
+                            <p class="text-xs text-slate-400 font-bold uppercase tracking-wider">Analyse des segments K-12, Enseignement supérieur et Corporate</p>
+                        </div>
+                        <div class="flex items-center gap-6">
+                            <div class="text-center">
+                                <div class="text-lg md:text-xl font-black text-brand-gold-500">46,5%</div>
+                                <div class="text-[9px] text-slate-400 uppercase font-extrabold tracking-wider">K-12</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-lg md:text-xl font-black text-brand-gold-500">28%</div>
+                                <div class="text-[9px] text-slate-400 uppercase font-extrabold tracking-wider">Supérieur</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-lg md:text-xl font-black text-brand-gold-500">26%</div>
+                                <div class="text-[9px] text-slate-400 uppercase font-extrabold tracking-wider">Corporate</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Grid Content -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-5xl mb-3">
+                        
+                        <!-- Card 1: Market Segmentation by Sector -->
+                        <div class="bg-white/5 border border-white/10 rounded-2xl p-4 flex flex-col justify-between glass-card-hover transition-all duration-300">
+                            <div class="flex justify-between items-center mb-1">
+                                <h3 class="text-xs font-black text-white uppercase tracking-wider font-display flex items-center gap-2">
+                                    <i class="fas fa-school text-brand-gold-500"></i> Répartition par secteur d'éducation
+                                </h3>
+                            </div>
+                            <div class="h-32 w-full relative">
+                                <div id="sectorChart" style="width: 100%; height: 100%;"></div>
+                            </div>
+                            <div class="grid grid-cols-3 gap-2 mt-3 text-center">
+                                <div class="bg-white/5 border border-white/5 p-2 rounded-lg flex flex-col justify-center items-center">
+                                    <div class="text-xs font-black text-white">46,5%</div>
+                                    <span class="bg-sky-500/20 text-sky-400 border border-sky-500/30 px-1.5 py-0.5 rounded text-[8px] font-bold block mt-1">K-12</span>
+                                </div>
+                                <div class="bg-white/5 border border-white/5 p-2 rounded-lg flex flex-col justify-center items-center">
+                                    <div class="text-xs font-black text-white">28,0%</div>
+                                    <span class="bg-purple-500/20 text-purple-400 border border-purple-500/30 px-1.5 py-0.5 rounded text-[8px] font-bold block mt-1">Supérieur</span>
+                                </div>
+                                <div class="bg-white/5 border border-white/5 p-2 rounded-lg flex flex-col justify-center items-center">
+                                    <div class="text-xs font-black text-white">26,0%</div>
+                                    <span class="bg-amber-500/20 text-amber-400 border border-amber-500/30 px-1.5 py-0.5 rounded text-[8px] font-bold block mt-1">Corporate</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Growth by Segment -->
+                        <div class="bg-white/5 border border-white/10 rounded-2xl p-4 flex flex-col justify-between glass-card-hover transition-all duration-300">
+                            <div class="flex justify-between items-center mb-1">
+                                <h3 class="text-xs font-black text-white uppercase tracking-wider font-display flex items-center gap-2">
+                                    <i class="fas fa-chart-line text-brand-gold-500"></i> Croissance par segment (2025-2034)
+                                </h3>
+                            </div>
+                            <div class="h-32 w-full relative">
+                                <canvas id="growthChart"></canvas>
+                            </div>
+                            <div class="grid grid-cols-2 gap-2 mt-3">
+                                <div class="bg-white/5 border border-white/5 p-2 rounded-lg flex flex-col justify-center">
+                                    <div class="flex items-center justify-between text-[8px] font-bold text-slate-400">
+                                        <span>Mobile Learning</span>
+                                        <span class="text-brand-green-400">Forte hausse</span>
+                                    </div>
+                                    <div class="text-sm font-black text-white mt-0.5">+54,3%</div>
+                                </div>
+                                <div class="bg-white/5 border border-white/5 p-2 rounded-lg flex flex-col justify-center">
+                                    <div class="flex items-center justify-between text-[8px] font-bold text-slate-400">
+                                        <span>LMS / LXP</span>
+                                        <span class="text-brand-green-400">Adoption active</span>
+                                    </div>
+                                    <div class="text-sm font-black text-white mt-0.5">+42,0%</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Usage Patterns -->
+                        <div class="bg-white/5 border border-white/10 rounded-2xl p-4 flex flex-col justify-between glass-card-hover transition-all duration-300">
+                            <div class="flex justify-between items-center mb-1">
+                                <h3 class="text-xs font-black text-white uppercase tracking-wider font-display flex items-center gap-2">
+                                    <i class="fas fa-users text-brand-green-500"></i> Motifs d'utilisation par secteur
+                                </h3>
+                            </div>
+                            <div class="h-32 w-full relative">
+                                <canvas id="usageChart"></canvas>
+                            </div>
+                            <div class="grid grid-cols-3 gap-2 mt-3 text-center">
+                                <div class="bg-white/5 border border-white/5 p-1 rounded-lg">
+                                    <span class="text-[9px] text-slate-400 font-bold block">Évaluation</span>
+                                    <span class="text-xs font-black text-white mt-0.5">68%</span>
+                                </div>
+                                <div class="bg-white/5 border border-white/5 p-1 rounded-lg">
+                                    <span class="text-[9px] text-slate-400 font-bold block">Collaboration</span>
+                                    <span class="text-xs font-black text-white mt-0.5">45%</span>
+                                </div>
+                                <div class="bg-white/5 border border-white/5 p-1 rounded-lg">
+                                    <span class="text-[9px] text-slate-400 font-bold block">Gamification</span>
+                                    <span class="text-xs font-black text-white mt-0.5">32%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4: Technology Adoption -->
+                        <div class="bg-white/5 border border-white/10 rounded-2xl p-4 flex flex-col justify-between glass-card-hover transition-all duration-300">
+                            <div class="flex justify-between items-center mb-1">
+                                <h3 class="text-xs font-black text-white uppercase tracking-wider font-display flex items-center gap-2">
+                                    <i class="fas fa-rocket text-brand-green-500"></i> Adoption technologique par secteur
+                                </h3>
+                            </div>
+                            <div class="h-32 w-full relative">
+                                <div id="techAdoptionChart" style="width: 100%; height: 100%;"></div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-2 mt-3">
+                                <div class="bg-white/5 border border-white/5 p-2 rounded-lg flex flex-col justify-center">
+                                    <span class="text-[8px] font-bold text-slate-400 block">IA & Machine Learning</span>
+                                    <span class="text-xs font-black text-white mt-0.5">82%</span>
+                                </div>
+                                <div class="bg-white/5 border border-white/5 p-2 rounded-lg flex flex-col justify-center">
+                                    <span class="text-[8px] font-bold text-slate-400 block">Cloud Native</span>
+                                    <span class="text-xs font-black text-white mt-0.5">76%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Bottom Section inside Slide -->
+                    <div class="w-full max-w-5xl flex flex-col sm:flex-row justify-between items-center border-t border-white/10 pt-3 gap-2">
+                        <span class="text-xs text-slate-400 font-bold uppercase tracking-wider flex items-center gap-1.5">
+                            <i class="fas fa-info-circle text-brand-gold-500"></i> Données : IMARC Group et Rapport EdTech Africa 2025
+                        </span>
+                        <span class="bg-brand-green-500/20 border border-brand-green-500/35 text-brand-green-400 text-[10px] px-3.5 py-1.5 rounded-full font-bold flex items-center gap-1.5">
+                            <i class="fas fa-chart-line text-xs"></i> Croissance projetée : +11,33% CAGR
+                        </span>
+                    </div>
+
+                </div>
+
+                <!-- ── SLIDE 9: MARCHÉ EDTECH CAMEROUN – CONTEXTE & OPPORTUNITÉS ── -->
                 <div id="slide-8-cameroon" class="slide-frame slide-fade-in w-full hidden flex flex-col items-center">
                     
                     <!-- Header Section inside slide -->
@@ -3358,7 +3503,7 @@
     <!-- ── JavaScript presentation logic ────────────────────────────────────── -->
     <script>
         let currentSlideIndex = 0;
-        const totalSlides = 21;
+        const totalSlides = 22;
         const dots = document.querySelectorAll('.slide-dot');
         const frames = document.querySelectorAll('.slide-frame');
         const slideLabel = document.getElementById('slide-label');
@@ -3374,6 +3519,10 @@
         let cameroonInternetChartInstance = null;
         let cameroonEcosystemChartInstance = null;
         let cameroonChallengesChartInstance = null;
+        let sectorChartInstance = null;
+        let growthChartInstance = null;
+        let usageChartInstance = null;
+        let techAdoptionChartInstance = null;
 
         function goToSlide(index) {
             // Update dots
@@ -3405,10 +3554,12 @@
             } else if (currentSlideIndex === 7) {
                 initNewMarketCharts();
             } else if (currentSlideIndex === 8) {
+                initSectorSegmentationCharts();
+            } else if (currentSlideIndex === 9) {
                 initCameroonCharts();
-            } else if (currentSlideIndex === 13) {
+            } else if (currentSlideIndex === 14) {
                 initB2BChart();
-            } else if (currentSlideIndex === 19) {
+            } else if (currentSlideIndex === 20) {
                 initB2CChart();
             }
         }
@@ -3937,11 +4088,267 @@
             });
         }
 
+        function initSectorSegmentationCharts() {
+            initSectorChart();
+            initGrowthChart();
+            initUsageChart();
+            initTechAdoptionChart();
+        }
+
+        function initSectorChart() {
+            if (sectorChartInstance) return;
+            const chartDom = document.getElementById('sectorChart');
+            sectorChartInstance = echarts.init(chartDom);
+            const option = {
+                backgroundColor: 'transparent',
+                tooltip: {
+                    trigger: 'item',
+                    backgroundColor: 'rgba(15, 23, 42, 0.9)',
+                    borderColor: 'rgba(255, 255, 255, 0.1)',
+                    borderWidth: 1,
+                    textStyle: { color: '#f8fafc' },
+                    formatter: '{b}: {c}%'
+                },
+                series: [{
+                    name: 'Secteurs',
+                    type: 'pie',
+                    radius: ['45%', '70%'],
+                    center: ['50%', '50%'],
+                    data: [
+                        { value: 46.5, name: 'K-12', itemStyle: { color: '#FF6B35' } },
+                        { value: 28, name: 'Supérieur', itemStyle: { color: '#3B82F6' } },
+                        { value: 26, name: 'Corporate', itemStyle: { color: '#10B981' } }
+                    ],
+                    label: {
+                        fontSize: 9,
+                        fontWeight: 'bold',
+                        color: '#94a3b8',
+                        position: 'outside'
+                    },
+                    labelLine: {
+                        lineStyle: { color: 'rgba(255, 255, 255, 0.1)' }
+                    },
+                    emphasis: {
+                        itemStyle: { shadowBlur: 10, shadowColor: 'rgba(0, 0, 0, 0.5)' }
+                    }
+                }]
+            };
+            sectorChartInstance.setOption(option);
+        }
+
+        function initGrowthChart() {
+            if (growthChartInstance) return;
+            const ctx = document.getElementById('growthChart').getContext('2d');
+            growthChartInstance = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['2025', '2026', '2027', '2028', '2029', '2030', '2031', '2032', '2033', '2034'],
+                    datasets: [
+                        {
+                            label: 'K-12',
+                            data: [3.4, 3.8, 4.2, 4.8, 5.3, 5.9, 6.5, 7.2, 7.9, 8.9],
+                            borderColor: '#FF6B35',
+                            backgroundColor: 'rgba(255, 107, 53, 0.05)',
+                            borderWidth: 2.5,
+                            fill: true,
+                            tension: 0.4,
+                            pointRadius: 1
+                        },
+                        {
+                            label: 'Supérieur',
+                            data: [2.1, 2.3, 2.6, 2.9, 3.2, 3.6, 4.0, 4.4, 4.9, 5.4],
+                            borderColor: '#3B82F6',
+                            backgroundColor: 'rgba(59, 130, 246, 0.05)',
+                            borderWidth: 2.5,
+                            fill: true,
+                            tension: 0.4,
+                            pointRadius: 1
+                        },
+                        {
+                            label: 'Corporate',
+                            data: [1.9, 2.1, 2.4, 2.7, 3.0, 3.3, 3.7, 4.1, 4.5, 5.0],
+                            borderColor: '#10B981',
+                            backgroundColor: 'rgba(16, 185, 129, 0.05)',
+                            borderWidth: 2.5,
+                            fill: true,
+                            tension: 0.4,
+                            pointRadius: 1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'top',
+                            labels: {
+                                boxWidth: 8,
+                                color: '#94a3b8',
+                                font: { size: 9, family: 'Inter', weight: 600 }
+                            }
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(15, 23, 42, 0.9)',
+                            titleColor: '#fff',
+                            bodyColor: '#f8fafc',
+                            borderColor: 'rgba(255, 255, 255, 0.1)',
+                            borderWidth: 1
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: 'rgba(255, 255, 255, 0.05)' },
+                            ticks: { color: '#94a3b8', font: { size: 8 } }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { color: '#94a3b8', font: { size: 8 } }
+                        }
+                    }
+                }
+            });
+        }
+
+        function initUsageChart() {
+            if (usageChartInstance) return;
+            const ctx = document.getElementById('usageChart').getContext('2d');
+            usageChartInstance = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['K-12', 'Supérieur', 'Corporate'],
+                    datasets: [
+                        {
+                            label: 'Évaluation',
+                            data: [68, 72, 45],
+                            backgroundColor: '#FF6B35',
+                            borderRadius: 4
+                        },
+                        {
+                            label: 'Collaboration',
+                            data: [45, 58, 62],
+                            backgroundColor: '#3B82F6',
+                            borderRadius: 4
+                        },
+                        {
+                            label: 'Gamification',
+                            data: [32, 28, 35],
+                            backgroundColor: '#10B981',
+                            borderRadius: 4
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'top',
+                            labels: {
+                                boxWidth: 8,
+                                color: '#94a3b8',
+                                font: { size: 9, family: 'Inter', weight: 600 }
+                            }
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(15, 23, 42, 0.9)',
+                            titleColor: '#fff',
+                            bodyColor: '#f8fafc',
+                            borderColor: 'rgba(255, 255, 255, 0.1)',
+                            borderWidth: 1
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: 'rgba(255, 255, 255, 0.05)' },
+                            ticks: { color: '#94a3b8', font: { size: 8 } }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { color: '#94a3b8', font: { size: 8 } }
+                        }
+                    }
+                }
+            });
+        }
+
+        function initTechAdoptionChart() {
+            if (techAdoptionChartInstance) return;
+            const chartDom = document.getElementById('techAdoptionChart');
+            techAdoptionChartInstance = echarts.init(chartDom);
+            const option = {
+                backgroundColor: 'transparent',
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: { type: 'shadow' },
+                    backgroundColor: 'rgba(15, 23, 42, 0.9)',
+                    borderColor: 'rgba(255, 255, 255, 0.1)',
+                    borderWidth: 1,
+                    textStyle: { color: '#f8fafc' }
+                },
+                legend: {
+                    textStyle: { color: '#94a3b8', fontSize: 9, fontFamily: 'Inter' },
+                    itemWidth: 8,
+                    itemHeight: 8,
+                    top: '0%'
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '5%',
+                    top: '18%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'category',
+                    data: ['IA/ML', 'Cloud', 'Mobile', 'VR/AR', 'Blockch.'],
+                    axisLabel: { color: '#94a3b8', fontSize: 8 },
+                    axisLine: { show: false },
+                    axisTick: { show: false }
+                },
+                yAxis: {
+                    type: 'value',
+                    axisLabel: { color: '#94a3b8', fontSize: 8 },
+                    splitLine: { lineStyle: { color: 'rgba(255, 255, 255, 0.05)' } }
+                },
+                series: [
+                    {
+                        name: 'K-12',
+                        type: 'bar',
+                        data: [82, 76, 92, 45, 28],
+                        itemStyle: { color: '#FF6B35', borderRadius: [3, 3, 0, 0] },
+                        label: { show: true, position: 'top', fontSize: 7, color: '#94a3b8' }
+                    },
+                    {
+                        name: 'Supérieur',
+                        type: 'bar',
+                        data: [88, 85, 78, 62, 35],
+                        itemStyle: { color: '#3B82F6', borderRadius: [3, 3, 0, 0] },
+                        label: { show: true, position: 'top', fontSize: 7, color: '#94a3b8' }
+                    },
+                    {
+                        name: 'Corporate',
+                        type: 'bar',
+                        data: [75, 90, 85, 58, 42],
+                        itemStyle: { color: '#10B981', borderRadius: [3, 3, 0, 0] },
+                        label: { show: true, position: 'top', fontSize: 7, color: '#94a3b8' }
+                    }
+                ]
+            };
+            techAdoptionChartInstance.setOption(option);
+        }
+
         // Window resize handler to make ECharts responsive
         window.addEventListener('resize', function() {
             if (segmentationChartInstance) segmentationChartInstance.resize();
             if (driversChartInstance) driversChartInstance.resize();
             if (cameroonEcosystemChartInstance) cameroonEcosystemChartInstance.resize();
+            if (sectorChartInstance) sectorChartInstance.resize();
+            if (techAdoptionChartInstance) techAdoptionChartInstance.resize();
         });
 
         // Live Projections Simulator
