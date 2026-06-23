@@ -157,7 +157,7 @@
             </div>
         </div>
 
-        <!-- Slide Indicators (20 slides total) -->
+        <!-- Slide Indicators (21 slides total) -->
         <div class="flex items-center gap-2 mb-2">
             <button onclick="goToSlide(0)" class="slide-dot h-2 w-8 rounded-full bg-brand-green-500 transition-all duration-300" aria-label="Slide 1"></button>
             <button onclick="goToSlide(1)" class="slide-dot h-2 w-2 rounded-full bg-white/20 hover:bg-white/40 transition-all duration-300" aria-label="Slide 2"></button>
@@ -179,6 +179,7 @@
             <button onclick="goToSlide(17)" class="slide-dot h-2 w-2 rounded-full bg-white/20 hover:bg-white/40 transition-all duration-300" aria-label="Slide 18"></button>
             <button onclick="goToSlide(18)" class="slide-dot h-2 w-2 rounded-full bg-white/20 hover:bg-white/40 transition-all duration-300" aria-label="Slide 19"></button>
             <button onclick="goToSlide(19)" class="slide-dot h-2 w-2 rounded-full bg-white/20 hover:bg-white/40 transition-all duration-300" aria-label="Slide 20"></button>
+            <button onclick="goToSlide(20)" class="slide-dot h-2 w-2 rounded-full bg-white/20 hover:bg-white/40 transition-all duration-300" aria-label="Slide 21"></button>
         </div>
     </header>
 
@@ -1324,7 +1325,144 @@
 
                 </div>
 
-                <!-- ── SLIDE 8: NOVA EDUTECH - SERVICES DÉTAILLÉS ── -->
+                <!-- ── SLIDE 8: MARCHÉ EDTECH CAMEROUN – CONTEXTE & OPPORTUNITÉS ── -->
+                <div id="slide-8-cameroon" class="slide-frame slide-fade-in w-full hidden flex flex-col items-center">
+                    
+                    <!-- Header Section inside slide -->
+                    <div class="w-full flex flex-col md:flex-row justify-between items-center border-b border-white/10 pb-3 mb-4 gap-4">
+                        <div class="text-center md:text-left">
+                            <h2 class="text-2xl md:text-3xl font-black text-white font-display">Marché EdTech Cameroun – Contexte &amp; Opportunités</h2>
+                            <p class="text-xs text-slate-400 font-bold uppercase tracking-wider">Analyse de l'écosystème éducatif numérique 2026</p>
+                        </div>
+                        <div class="flex items-center gap-6">
+                            <div class="text-center">
+                                <div class="text-lg md:text-xl font-black text-brand-gold-500">43,9%</div>
+                                <div class="text-[9px] text-slate-400 uppercase font-extrabold tracking-wider">Pénétration Internet</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-lg md:text-xl font-black text-brand-gold-500">14M$</div>
+                                <div class="text-[9px] text-slate-400 uppercase font-extrabold tracking-wider">Investissements 2024</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Grid Content -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-5xl mb-3">
+                        
+                        <!-- Card 1: Internet Penetration -->
+                        <div class="bg-white/5 border border-white/10 rounded-2xl p-4 flex flex-col justify-between glass-card-hover transition-all duration-300">
+                            <div class="flex justify-between items-center mb-2">
+                                <h3 class="text-xs font-black text-white uppercase tracking-wider font-display flex items-center gap-2">
+                                    <i class="fas fa-wifi text-brand-gold-500"></i> Pénétration Internet au Cameroun
+                                </h3>
+                            </div>
+                            <div class="h-32 w-full relative">
+                                <canvas id="cameroonInternetChart"></canvas>
+                            </div>
+                            <div class="grid grid-cols-3 gap-2 mt-3 text-center">
+                                <div class="bg-white/5 border border-white/5 p-1 rounded-lg">
+                                    <div class="text-xs font-black text-white">43,9%</div>
+                                    <div class="text-[8px] text-slate-400 font-bold uppercase">2024</div>
+                                </div>
+                                <div class="bg-white/5 border border-white/5 p-1 rounded-lg">
+                                    <div class="text-xs font-black text-white">52%</div>
+                                    <div class="text-[8px] text-slate-400 font-bold uppercase">2027 (proj)</div>
+                                </div>
+                                <div class="bg-white/5 border border-white/5 p-1 rounded-lg">
+                                    <div class="text-xs font-black text-white">65%</div>
+                                    <div class="text-[8px] text-slate-400 font-bold uppercase">2030 (proj)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: EdTech Ecosystem -->
+                        <div class="bg-white/5 border border-white/10 rounded-2xl p-4 flex flex-col justify-between glass-card-hover transition-all duration-300">
+                            <div class="flex justify-between items-center mb-2">
+                                <h3 class="text-xs font-black text-white uppercase tracking-wider font-display flex items-center gap-2">
+                                    <i class="fas fa-network-wired text-brand-gold-500"></i> Écosystème EdTech Cameroun
+                                </h3>
+                            </div>
+                            <div class="h-32 w-full relative">
+                                <div id="cameroonEcosystemChart" style="width: 100%; height: 100%;"></div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-2 mt-3">
+                                <div class="bg-white/5 border border-white/5 p-2 rounded-lg flex items-center gap-2">
+                                    <div class="w-6 h-6 rounded bg-brand-green-500/20 flex items-center justify-center text-brand-green-400 flex-shrink-0">
+                                        <i class="fas fa-building text-[10px]"></i>
+                                    </div>
+                                    <span class="text-[10px] text-slate-300 font-bold">ODC Cameroun</span>
+                                </div>
+                                <div class="bg-white/5 border border-white/5 p-2 rounded-lg flex items-center gap-2">
+                                    <div class="w-6 h-6 rounded bg-brand-green-500/20 flex items-center justify-center text-brand-green-400 flex-shrink-0">
+                                        <i class="fas fa-graduation-cap text-[10px]"></i>
+                                    </div>
+                                    <span class="text-[10px] text-slate-300 font-bold">Formations digitales</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Market Challenges -->
+                        <div class="bg-white/5 border border-white/10 rounded-2xl p-4 flex flex-col justify-between glass-card-hover transition-all duration-300">
+                            <div class="flex justify-between items-center mb-2">
+                                <h3 class="text-xs font-black text-white uppercase tracking-wider font-display flex items-center gap-2">
+                                    <i class="fas fa-exclamation-triangle text-brand-green-500"></i> Défis du marché EdTech
+                                </h3>
+                            </div>
+                            <div class="h-32 w-full relative">
+                                <canvas id="cameroonChallengesChart"></canvas>
+                            </div>
+                            <div class="grid grid-cols-2 gap-2 mt-3 text-center">
+                                <div class="bg-white/5 border border-white/5 p-2 rounded-lg">
+                                    <span class="text-[9px] text-slate-400 font-bold block">Accès électricité</span>
+                                    <span class="text-xs font-black text-white mt-0.5">48%</span>
+                                </div>
+                                <div class="bg-white/5 border border-white/5 p-2 rounded-lg">
+                                    <span class="text-[9px] text-slate-400 font-bold block">Formations qualifiées</span>
+                                    <span class="text-xs font-black text-white mt-0.5">35%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4: Growth Opportunities -->
+                        <div class="bg-white/5 border border-white/10 rounded-2xl p-4 flex flex-col justify-between glass-card-hover transition-all duration-300">
+                            <div class="flex justify-between items-center mb-2">
+                                <h3 class="text-xs font-black text-white uppercase tracking-wider font-display flex items-center gap-2">
+                                    <i class="fas fa-chart-line text-brand-green-500"></i> Opportunités de croissance
+                                </h3>
+                            </div>
+                            
+                            <div class="bg-white/5 border border-brand-gold-500/20 rounded-xl p-4 flex flex-col justify-center my-1.5">
+                                <div class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Marché EdTech Cameroun</div>
+                                <div class="text-2xl font-black text-brand-gold-500 my-1">+15% CAGR</div>
+                                <div class="text-[10px] text-slate-300">Croissance annuelle projetée</div>
+                            </div>
+
+                            <div class="mt-2">
+                                <div class="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-brand-gold-500 to-brand-green-500 rounded-full" style="width: 75%;"></div>
+                                </div>
+                                <div class="flex justify-between items-center mt-1.5 text-[10px] font-bold">
+                                    <span class="text-slate-400">Potentiel du marché</span>
+                                    <span class="text-brand-gold-500">75%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Bottom Section inside Slide -->
+                    <div class="w-full max-w-5xl flex flex-col sm:flex-row justify-between items-center border-t border-white/10 pt-3 gap-2">
+                        <span class="text-xs text-slate-400 font-bold uppercase tracking-wider flex items-center gap-1.5">
+                            <i class="fas fa-info-circle text-brand-gold-500"></i> Données : IMARC Group, UNESCO et Ministère de l'Éducation du Cameroun 2024
+                        </span>
+                        <span class="bg-brand-green-500/20 border border-brand-green-500/35 text-brand-green-400 text-[10px] px-3.5 py-1.5 rounded-full font-bold flex items-center gap-1.5">
+                            <i class="fas fa-rocket text-xs"></i> Marché émergent à fort potentiel
+                        </span>
+                    </div>
+
+                </div>
+
+                <!-- ── SLIDE 9: NOVA EDUTECH - SERVICES DÉTAILLÉS ── -->
                 <div id="slide-8" class="slide-frame slide-fade-in w-full hidden flex flex-col items-center">
                     
                     <!-- Header Section inside slide -->
@@ -3220,7 +3358,7 @@
     <!-- ── JavaScript presentation logic ────────────────────────────────────── -->
     <script>
         let currentSlideIndex = 0;
-        const totalSlides = 20;
+        const totalSlides = 21;
         const dots = document.querySelectorAll('.slide-dot');
         const frames = document.querySelectorAll('.slide-frame');
         const slideLabel = document.getElementById('slide-label');
@@ -3233,6 +3371,9 @@
         let segmentationChartInstance = null;
         let regionalChartInstance = null;
         let driversChartInstance = null;
+        let cameroonInternetChartInstance = null;
+        let cameroonEcosystemChartInstance = null;
+        let cameroonChallengesChartInstance = null;
 
         function goToSlide(index) {
             // Update dots
@@ -3263,9 +3404,11 @@
                 initMarketChart();
             } else if (currentSlideIndex === 7) {
                 initNewMarketCharts();
-            } else if (currentSlideIndex === 12) {
+            } else if (currentSlideIndex === 8) {
+                initCameroonCharts();
+            } else if (currentSlideIndex === 13) {
                 initB2BChart();
-            } else if (currentSlideIndex === 18) {
+            } else if (currentSlideIndex === 19) {
                 initB2CChart();
             }
         }
@@ -3647,10 +3790,158 @@
             driversChartInstance.setOption(option);
         }
 
+        function initCameroonCharts() {
+            initCameroonInternetChart();
+            initCameroonEcosystemChart();
+            initCameroonChallengesChart();
+        }
+
+        function initCameroonInternetChart() {
+            if (cameroonInternetChartInstance) return;
+            const ctx = document.getElementById('cameroonInternetChart').getContext('2d');
+            cameroonInternetChartInstance = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['2020', '2021', '2022', '2023', '2024', '2025', '2026', '2027'],
+                    datasets: [{
+                        label: 'Pénétration Internet (%)',
+                        data: [25, 28, 32, 36, 43.9, 48, 52, 55],
+                        borderColor: '#3b82f6',
+                        borderWidth: 3,
+                        backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                        fill: true,
+                        tension: 0.4,
+                        pointRadius: 4,
+                        pointBackgroundColor: '#fac920'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            backgroundColor: 'rgba(15, 23, 42, 0.9)',
+                            titleColor: '#fff',
+                            bodyColor: '#f8fafc',
+                            borderColor: 'rgba(255, 255, 255, 0.1)',
+                            borderWidth: 1
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 60,
+                            grid: { color: 'rgba(255, 255, 255, 0.05)' },
+                            ticks: { color: '#94a3b8', font: { size: 9, family: 'Inter', weight: 600 } }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { color: '#94a3b8', font: { size: 9, family: 'Inter', weight: 600 } }
+                        }
+                    }
+                }
+            });
+        }
+
+        function initCameroonEcosystemChart() {
+            if (cameroonEcosystemChartInstance) return;
+            const chartDom = document.getElementById('cameroonEcosystemChart');
+            cameroonEcosystemChartInstance = echarts.init(chartDom);
+            const option = {
+                backgroundColor: 'transparent',
+                tooltip: {
+                    trigger: 'item',
+                    backgroundColor: 'rgba(15, 23, 42, 0.9)',
+                    borderColor: 'rgba(255, 255, 255, 0.1)',
+                    borderWidth: 1,
+                    textStyle: { color: '#f8fafc' },
+                    formatter: '{b}: {c}%'
+                },
+                series: [{
+                    name: 'Écosystème',
+                    type: 'pie',
+                    radius: ['45%', '75%'],
+                    center: ['50%', '50%'],
+                    avoidLabelOverlap: true,
+                    data: [
+                        { value: 35, name: 'Écoles', itemStyle: { color: '#00a556' } },
+                        { value: 25, name: 'Universités', itemStyle: { color: '#3b82f6' } },
+                        { value: 20, name: 'Formations', itemStyle: { color: '#fac920' } },
+                        { value: 15, name: 'ONG', itemStyle: { color: '#8b5cf6' } },
+                        { value: 5, name: 'Autres', itemStyle: { color: '#f97316' } }
+                    ],
+                    label: {
+                        show: true,
+                        position: 'outside',
+                        fontSize: 9,
+                        fontWeight: 'bold',
+                        color: '#94a3b8'
+                    },
+                    labelLine: {
+                        lineStyle: { color: 'rgba(255, 255, 255, 0.1)' }
+                    },
+                    emphasis: {
+                        itemStyle: { shadowBlur: 10, shadowColor: 'rgba(0, 0, 0, 0.5)' }
+                    }
+                }]
+            };
+            cameroonEcosystemChartInstance.setOption(option);
+        }
+
+        function initCameroonChallengesChart() {
+            if (cameroonChallengesChartInstance) return;
+            const ctx = document.getElementById('cameroonChallengesChart').getContext('2d');
+            cameroonChallengesChartInstance = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Accès', 'Contenu', 'Formation', 'Budget', 'Tech'],
+                    datasets: [{
+                        data: [65, 45, 55, 70, 40],
+                        backgroundColor: [
+                            'rgba(249, 115, 22, 0.85)',
+                            'rgba(250, 201, 32, 0.85)',
+                            'rgba(59, 130, 246, 0.85)',
+                            'rgba(0, 165, 86, 0.85)',
+                            'rgba(139, 92, 246, 0.85)'
+                        ],
+                        borderRadius: 5
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            backgroundColor: 'rgba(15, 23, 42, 0.9)',
+                            titleColor: '#fff',
+                            bodyColor: '#f8fafc',
+                            borderColor: 'rgba(255, 255, 255, 0.1)',
+                            borderWidth: 1
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 80,
+                            grid: { color: 'rgba(255, 255, 255, 0.05)' },
+                            ticks: { color: '#94a3b8', font: { size: 9, family: 'Inter', weight: 600 } }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { color: '#94a3b8', font: { size: 9, family: 'Inter', weight: 600 } }
+                        }
+                    }
+                }
+            });
+        }
+
         // Window resize handler to make ECharts responsive
         window.addEventListener('resize', function() {
             if (segmentationChartInstance) segmentationChartInstance.resize();
             if (driversChartInstance) driversChartInstance.resize();
+            if (cameroonEcosystemChartInstance) cameroonEcosystemChartInstance.resize();
         });
 
         // Live Projections Simulator
